@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tails and Trails - Veterinary Clinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="base.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo-section">
+        <div class="logo-circle">
+          <img src="images/logo.png" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <div class="logo-text">Tails and Trails</div>
+      </div>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><button class="btn-login" id="loginBtn">Log In</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>Where every wait leads to wagging tails!</h1>
+        <p>At Tails and Trails, we understand that pets are family. Our dedicated team is here to provide the best care for your furry friends.</p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn btn-primary">Explore Services</a>
+          <button class="btn btn-secondary" id="bookNowBtn">Book Now</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/catdog.png" alt="Happy pets at Tails and Trails">
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-container">
+      <h2 class="section-title">About Us</h2>
+      <p class="about-text">
+        At <strong>Tails and Trails</strong>, we believe pets are more than companions—they're family. Our journey began with a passion for creating a safe, welcoming place where pets receive the love and medical attention they deserve. From routine check-ups and preventive care to specialized treatments, our team of experienced veterinarians and staff are dedicated to supporting every stage of your pet's life.
+      </p>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="services-container">
+      <h2 class="section-title" style="text-align: center;">Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Services</h3>
+          <ul>
+            <li>Checkups & Vaccinations</li>
+            <li>Dental Care</li>
+            <li>Surgery & Emergency</li>
+            <li>Grooming & Nutrition Advice</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-info" id="visit">
+    <div class="contact-container">
+      <h2 class="section-title" style="text-align: center;">Visit Us</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Contact</h3>
+          <ol>
+            <li>Call us at 09063979666</li>
+            <li>Email: tailsandtrailsve@gmail</li>
+          </ol>
+        </div>
+        <div class="info-card">
+          <h3>Visit Us</h3>
+          <ol>
+            <li>Carlos Q. Trinidad Avenu, Salawag, Dasmarinas City</li>
+            <li>Follow us: Tails and Tails</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter" id="newsletter">
+    <div class="newsletter-container">
+      <h2 class="section-title">Newsletter</h2>
+      <p>Get pet health tips, clinic updates, and special care guides.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" class="newsletter-input" placeholder="you@example.com" required id="newsletterEmail">
+        <button type="submit" class="btn btn-primary">Confirm</button>
+      </form>
+      <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tails and Trails. All rights reserved.</p>
+  </footer>
+
+  <div class="modal" id="bookingModal">
+    <div class="modal-content">
+      <button class="close-btn" id="closeModal">×</button>
+      <h2 class="modal-title">Book Appointment</h2>
+      <form id="bookingForm">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="contact">Contact No.</label>
+          <input type="text" id="contact" name="contact" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="doctor">Doctor Name</label>
+          <select id="doctor" name="doctor" class="form-control" required>
+            <option value="">Select doctor</option>
+            <option value="Dr. Dona Palacios">Dr. Dona Palacios</option>
+            <option value="Dr. Amiel John Padasay">Dr. Amiel John Padasay</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" name="category" class="form-control" required>
+            <option value="">Select category</option>
+            <option value="Checkup">Checkup</option>
+            <option value="Surgery">Surgery</option>
+            <option value="Grooming">Grooming</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Time</label>
+          <input type="time" id="time" name="time" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="symptoms">Symptoms</label>
+          <textarea id="symptoms" name="symptoms" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Pet Gender</label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="gender" value="Male" required>
+              Male
+            </label>
+            <label>
+              <input type="radio" name="gender" value="Female" required>
+              Female
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Book Now</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    const bookNowBtn = document.getElementById('bookNowBtn');
+    const bookingModal = document.getElementById('bookingModal');
+    const closeModal = document.getElementById('closeModal');
+    const bookingForm = document.getElementById('bookingForm');
+
+    bookNowBtn.addEventListener('click', () => {
+      bookingModal.style.display = 'flex';
+    });
+    closeModal.addEventListener('click', () => {
+      bookingModal.style.display = 'none';
+    });
+    bookingModal.addEventListener('click', (e) => {
+      if (e.target === bookingModal) {
+        bookingModal.style.display = 'none';
+      }
+    });
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(bookingForm);
+      let details = 'Booking Details:\\n\\n';
+      details += `Full Name: ${formData.get('fullname')}\\n`;
+      details += `Email: ${formData.get('email')}\\n`;
+      details += `Contact No.: ${formData.get('contact')}\\n`;
+      details += `Doctor: ${formData.get('doctor')}\\n`;
+      details += `Category: ${formData.get('category')}\\n`;
+      details += `Date: ${formData.get('date')}\\n`;
+      details += `Time: ${formData.get('time')}\\n`;
+      details += `Symptoms: ${formData.get('symptoms')}\\n`;
+      details += `Pet Gender: ${formData.get('gender')}`;
+      alert(details);
+      bookingModal.style.display = 'none';
+      bookingForm.reset();
+    });
+
+    const newsletterForm = document.getElementById('newsletterForm');
+    const newsletterEmail = document.getElementById('newsletterEmail');
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = newsletterEmail.value.trim();
+      if (email) {
+        alert(`The email "${email}" is subscribed!\\nThank you for subscribing!`);
+        newsletterEmail.value = '';
+      }
+    });
+
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 100) {
+        header.style.padding = '0.8rem 0';
+      } else {
+        header.style.padding = '1.2rem 0';
+      }
+    });
+  </script>
+</body>
+</html>
